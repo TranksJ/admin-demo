@@ -3,8 +3,9 @@ import App from './App.vue'
 import router from './router'
 import './plugins/element.js'
 import './assets/css/comm.css'
-
-Vue.config.productionTip = false
+import * as Service from './plugins/request.js'
+Vue.prototype.$http=Service;
+Vue.config.productionTip = false 
 
 new Vue({
   router,
