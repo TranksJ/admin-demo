@@ -2,17 +2,22 @@
   <div class="home">
     <!-- 头部导航栏 -->
     <div class="header">
-      <zp-header class="ppp"></zp-header>
+      <zp-header class="ppp">1122222</zp-header>
     </div>
     <!--中间部分-->
     <div class="content">
       <!-- 侧边栏 -->
       <div class="aside"></div>
       <!-- 主体内容 -->
-      <div class="main"></div>
+      <div class="main">
+          
+
+      </div>
     </div>
     <!-- 页脚 -->
-    <div class="footer"></div>
+    <div class="footer">
+      ©2020 Beijing,Brewster. All rights reserved.
+    </div>
   </div>
 </template>
 
@@ -33,7 +38,7 @@ export default {
   flex-direction: column;
 }
 .header {
-  height: 60px;
+  height: 50px;
   width: 100%;
   background-color: #409eff;
 }
@@ -54,6 +59,9 @@ export default {
 .footer {
   height: 40px;
   width: 100%;
+  line-height: 40px;
+  color: #999999;
+  text-align: center;
 }
 
 </style>

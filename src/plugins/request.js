@@ -1,14 +1,19 @@
 import axios from 'axios'
-import { Message, Loading } from 'element-ui'
-const ConfigBaseURL = 'http://localhost:8080/' //默认路径，这里也可以使用env来判断环境
-let loadingInstance = null //这里是loading
-//使用create方法创建axios实例
-export const Service = axios.create({
+import {
+  Message,
+  Loading
+} from 'element-ui'
+let ConfigBaseURL = 'http://localhost' // 默认路径，这里也可以使用env来判断环境
+let loadingInstance = null // 这里是loading
+// 使用create方法创建axios实例
+export let Service = axios.create({
   timeout: 7000, // 请求超时时间
   baseURL: ConfigBaseURL,
   method: 'post',
   headers: {
-    'Content-Type': 'application/json;charset=UTF-8'
+    'Content-Type': 'application/x-www-form-urlencoded'
+    // 'Content-Type': 'text/plain;charset=UTF-8'
+    // 'Content-Type': 'application/json;charset=UTF-8'
   }
 })
 // 添加请求拦截器

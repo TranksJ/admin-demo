@@ -3,9 +3,11 @@ import App from './App.vue'
 import router from './router'
 import './plugins/element.js'
 import './assets/css/comm.css'
-import * as Service from './plugins/request.js'
-Vue.prototype.$http=Service;
-Vue.config.productionTip = false 
+import { Service } from './plugins/request.js'
+// import axios from 'axios'
+// Vue.prototype.$axios = axios
+Vue.prototype.$axios = Service
+Vue.config.productionTip = false
 
 new Vue({
   router,
