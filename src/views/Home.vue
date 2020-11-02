@@ -2,7 +2,16 @@
   <div class="home">
     <!-- 头部导航栏 -->
     <div class="header">
-      <zp-header class="ppp">1122222</zp-header>
+      <bw-header>
+        <!-- 插槽logo -->
+        <template v-slot:default>
+          <img src="../assets/img/logo.png" alt="">
+        </template>
+        <!-- 插槽登录用户名 -->
+        <template v-slot:user>
+          <span>超级管理员</span>
+        </template>
+      </bw-header>
     </div>
     <!--中间部分-->
     <div class="content">
@@ -10,8 +19,7 @@
       <div class="aside"></div>
       <!-- 主体内容 -->
       <div class="main">
-          
-
+        <router-view></router-view>
       </div>
     </div>
     <!-- 页脚 -->
@@ -22,11 +30,13 @@
 </template>
 
 <script>
-import header from "../components/Header";
+import BwHeader from "../components/Header";
+import BwComminbox from "../components/Comminbox";
 export default {
   name: "Home",
   components: {
-    'zp-header':header
+    'BwHeader':BwHeader,
+    'BwComminbox':BwComminbox
   },
 };
 </script>
@@ -54,6 +64,8 @@ export default {
   .main {
     height: 100%;
     flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
   }
 }
 .footer {

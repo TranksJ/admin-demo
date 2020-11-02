@@ -1,25 +1,26 @@
 <template>
   <div class="zp-header">
-    <img src="../assets/img/logo.png" alt="">
+    <slot>Logo</slot>
     <ul>
       <li><a href="/">首页</a></li>
-      <li><a href="#">归档管理</a></li>
-      <li><a href="#">一级菜单</a></li>
-      <li><a href="#">一级菜单</a></li>
-      <li><a href="#">一级菜单</a></li>
+      <li><a href="/storehouse">库房设置</a></li>
+      <li><a >一级菜单</a></li>
+      <li><a >一级菜单</a></li>
+      <li><a >一级菜单</a></li>
       <li>
-        <a href="#">一级菜单</a>
+        <a >一级菜单</a>
         <ul>
-          <li><a href="#">二级菜单</a></li>
-          <li><a href="#">二级菜单</a></li>
+          <li><a >二级菜单</a></li>
+          <li><a >二级菜单</a></li>
         </ul>
       </li>
     </ul>
+    <slot name="user"></slot>
   </div>
 </template>
 <script>
 export default {
-  name: 'Header'
+  name: 'BwHeader'
 }
 </script>
 <style lang="less" scoped>
@@ -29,6 +30,7 @@ export default {
   box-sizing: border-box;
   padding: 0 20px;
   display: flex;
+  align-items: center;
   ul {
     /* 清除ul标签的默认样式 */
     list-style-type: none;
@@ -69,6 +71,7 @@ export default {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none; /* 去除下划线 */
+    cursor: pointer;
   }
   img {
     height: 100%;
